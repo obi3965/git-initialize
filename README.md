@@ -1,1 +1,2 @@
-# 3dslideshow
+# animated text
+* cards animation
