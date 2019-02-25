@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.pexels.com/photos/955451/pexels-photo-955451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    center no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.wrapper > div{
+    width: 340px;
+    height: 360px;
+    background: deeppink;
+    margin: 4em auto; transition: transform .3s;
+}
+.wrapper>div:hover{
+    transform: scale(1.1);
+}
+
+@keyframes cardAnim{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.wrapper:nth-child(1){
+    animation: cardAnim 1s 2s backwards;
+}
+.wrapper:nth-child(2){
+    animation: cardAnim 2.5s 4s backwards;
+}
+.wrapper:nth-child(3){
+    animation: cardAnim 3s 5s backwards;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+}
+button:hover{
+      animation: buttonsanim 2s 1s linear;
+}
+@keyframes buttonsanim{
+    0%{transform: scale(1) rotateZ(0)}
+    5%{transform: scale(1.2) rotateZ(5deg)}
+    10%{transform: scale(1.2) rotateZ(-5deg)}
+
+    15%{transform: scale(1.2) rotateZ(5deg)}
+    20%{transform: scale(1.2) rotateZ(-5deg)}
+    25%{transform: scale(1.2) rotateZ(5deg)}
+    30%{transform: scale(1.2) rotateZ(-5deg)}
+    35%{transform: scale(1.2) rotateZ(5deg)}
+    40%{transform: scale(1.2) rotateZ(-5deg)}
+    45%{transform: scale(1.2) rotateZ(5deg)}
+    50%{transform: scale(1.2) rotateZ(-5deg)}
+    55%{transform: scale(1.2) rotateZ(5deg)}
+    60%{transform: scale(1.2) rotateZ(-5deg)}
+    65%{transform: scale(1.2) rotateZ(5deg)}
+    70%{transform: scale(1.2) rotateZ(-5deg)}
+    75%{transform: scale(1.2) rotateZ(5deg)}
+    80%{transform: scale(1.2) rotateZ(-5deg)}
+    85%{transform: scale(1.2) rotateZ(5deg)}
+    90%{transform: scale(1.2) rotateZ(-5deg)}
+    95%{transform: scale(1.2) rotateZ(5deg)}
+    100%{transform: scale(1) rotateZ(0)}
+   
+}
+
+.heading{
+    font-size: 40px;
+    color: wheat;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 2em auto;
+    white-space: pre-wrap;
+}
+.heading::after{
+    content: '';
+    width: 5px;
+    height: 55px;
+    background: wheat;
+    position: absolute;
+    animation: blinking 1s 3s infinite;
+}
+@keyframes blinking{
+    0%{background: white;}
+    50%{background: transparent;}
+    100%{background: white;}
+}
